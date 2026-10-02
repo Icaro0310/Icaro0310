@@ -74,6 +74,9 @@ override flags.
 | | [`devin-memory`](https://github.com/Icaro0310/devin-memory) | Anti-poisoning memory store: provenance, versioning, quarantine gate |
 | **5 — Ops** | [`devin-janitor`](https://github.com/Icaro0310/devin-janitor) | Session lifecycle: export-then-delete pipeline, tiered classification, pluggable judge |
 | | [`devin-orchestrator`](https://github.com/Icaro0310/devin-orchestrator) | Background-worker fan-out policy: deterministic planner, worker caps, no nesting |
+| related | [`poordjaevin`](https://github.com/Icaro0310/poordjaevin) | Djævin — local-first calibrated decision layer: typed questions (Choice/Score/Noul) with calibrated confidence, no API key. The cheap local judge |
+| related | [`devin-powerups`](https://github.com/Icaro0310/devin-powerups) | Maintainer hub: repo registry, scaffold template, weekly reports, ecosystem scout — fork it to run your own devin-* family |
+| related | [`devin-office`](https://github.com/Icaro0310/devin-office) | Pixel-art office rendering live Devin activity (sessions, subagents, MCP calls) as animated characters — zero-dep hub + probe |
 | related | [`qwenpaw-suite`](https://github.com/Icaro0310/qwenpaw-suite) | Small-VM LLM ops suite: Flask bridge (Ollama ↔ OpenAI-compatible API), healthcheck orchestrator, sync docs |
 
 ## The private runtime — the pattern, not the code
@@ -97,9 +100,9 @@ you ──► Devin Desktop (IDE / ACP sessions)
           ├─ heartbeat (cron): every 30 min wakes the session with a
           │   checklist; notifies only if something is urgent
           │
-          └─ local judge: a tiny calibrated model (qwen2.5 on a satellite
-              VM via SSH tunnel) answers cheap yes/no/rate questions —
-              zero cloud quota
+          └─ local judge: poordjaevin (public above) + a tiny model
+              (qwen2.5 on a satellite VM via SSH tunnel) answers cheap
+              yes/no/rate questions — zero cloud quota
 ```
 
 Rebuilding your own ≈ hooks + one MCP memory store + one comms channel +
