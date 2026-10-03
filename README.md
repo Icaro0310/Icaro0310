@@ -93,23 +93,33 @@ the exact data paths and `--data-dir` overrides for both systems.
 
 ## Runs on a personal machine?
 
-On a machine you control, the same tools can be wired into a standing
-**personal agent runtime** — Devin plus a few optional companions, each
-adding one capability:
+The catalog composes into a standing **agent runtime** when the machine is
+yours. Each optional piece adds one capability — none is required:
 
 | Optional piece | What it adds |
 |---|---|
 | **Hooks** (`SessionEnd`, `Stop`, `UserPromptSubmit`) | Automatic history export and lesson extraction after every session |
 | **An MCP memory store** | Decisions and conventions that survive across sessions |
-| **A notes vault** (e.g. Obsidian) | Curated long-term memory — decisions, learnings, session transcripts |
-| **A scheduler** (cron / Task Scheduler) | A periodic "heartbeat" that wakes Devin with a checklist, and janitor runs |
-| **A comms channel** (e.g. Slack) | Talk to your agent and get notified remotely |
-| **`poordjaevin` as judge** | Cheap yes/no/rate answers — through Devin's own model via ACP, or a fully offline local model |
+| **A notes vault** (e.g. Obsidian) | Curated long-term memory — decisions, learnings, transcripts |
+| **A scheduler** (cron / Task Scheduler) | Periodic checklists — heartbeat, janitor, scheduled reports |
+| **A comms channel** (e.g. Slack) | Talk to the agent and get notified remotely |
+| **`poordjaevin` as judge** | Cheap yes/no/rate answers — via Devin's own model (ACP), or a fully offline local model |
 
-I run exactly this on my own machines — the driving repo
-(`personal-agent-system`) stays private because it contains machine paths
-and credentials, but the **pattern is the public part**: hooks + memory +
-vault + scheduler + judge, all built from the catalog above.
+### On a corporate machine
+
+On a locked-down machine you get the tools **on demand**, not the standing
+runtime:
+
+- Everything in the catalog still runs — same commands, same local stores.
+- **Scheduler unavailable or restricted** → no automatic heartbeat; run
+  `devin-janitor --dry-run`, exports and reports manually instead.
+- **No third-party apps** → Slack remote control and the Obsidian vault are
+  out; the MCP memory store still works if the Devin config dir is writable.
+- **Outbound restrictions** → every tool is offline-capable; nothing in the
+  catalog needs a network call.
+
+That is the design constraint the ecosystem is built around: the runtime is
+an enhancement, never a dependency.
 
 ## Português (BR)
 
@@ -131,12 +141,18 @@ documenta os paths exatos (`~/.local/share/devin/cli/` no Linux,
 
 ### E numa máquina pessoal?
 
-Os mesmos utilitários viram um runtime de agente persistente: hooks exportam
-histórico e extraem lições ao fim de cada sessão, uma memória MCP guarda
-decisões entre sessões, um vault acumula notas curadas, um agendador dispara
-verificações periódicas, e um canal (Slack) permite falar com o agente à
-distância. O meu repositório de runtime é privado por conter credenciais —
-mas cada peça reutilizável está publicada no catálogo acima.
+Os mesmos utilitários compõem um runtime de agente permanente: hooks
+exportam histórico e extraem lições ao fim de cada sessão, uma memória MCP
+guarda decisões entre sessões, um vault (ex.: Obsidian) acumula notas
+curadas, um agendador dispara checklists periódicos, e um canal como o
+Slack permite falar com o agente à distância.
+
+Numa **máquina corporativa** o catálogo continua inteiro sob demanda — o
+que muda é o runtime permanente: sem agendador não há heartbeat automático
+(rodar `devin-janitor --dry-run` e exports manualmente), sem apps de
+terceiros ficam fora o canal Slack e o vault, e mesmo com restrições de
+rede nada no catálogo precisa de chamada externa. O runtime é um upgrade,
+nunca uma dependência.
 
 ---
 
