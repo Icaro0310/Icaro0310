@@ -10,7 +10,9 @@
 **Twenty local-first tools that turn Devin's own session data into backups,
 search, metrics, memory and QA — no cloud, no telemetry, nothing to sign up for.**
 
-by **[Ícaro Galvão](https://icaro0310.github.io/)** · QA Engineer
+<h2><a href="https://www.linkedin.com/in/ícaro-galvão-do-nascimento-663601280/">Ícaro Galvão</a></h2>
+
+**QA Engineer**
 
 Unofficial community project. Not affiliated with, endorsed by, or sponsored by Cognition AI.
 
