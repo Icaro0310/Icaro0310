@@ -1,6 +1,9 @@
 <div align="center">
 
-<img src="assets/banner.png" alt="Ícaro Galvão — devin-* ecosystem" width="100%"/>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/banner-dark.png"/>
+  <img src="assets/banner.png" alt="Ícaro Galvão — devin-* ecosystem" width="100%"/>
+</picture>
 
 <h1><a href="https://www.linkedin.com/in/ícaro-galvão-do-nascimento-663601280/">Ícaro Galvão</a></h1>
 
