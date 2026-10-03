@@ -22,7 +22,7 @@ Devin's own session data into backups, search, metrics, memory and QA.
 | | |
 |---|---|
 | [`devin-internals-spec`](https://github.com/Icaro0310/devin-internals-spec) | Devin's local stores, documented — schema detection, typed parsers, fixtures |
-| [`devin-office`](https://github.com/Icaro0310/devin-office) | Pixel-art office rendering live Devin activity as animated characters |
+| [`devin-office`](https://github.com/Icaro0310/devin-office) | Live Devin activity as an animated SVG circuit board — sessions, subagents, tools |
 | [`devin-doctor`](https://github.com/Icaro0310/devin-doctor) | `brew doctor` for a Devin install — stores, locks, config → concrete fixes |
 | [`devin-history`](https://github.com/Icaro0310/devin-history) | Session history → Markdown, JSON, CSV, Obsidian-ready |
 | [`poordjaevin`](https://github.com/Icaro0310/poordjaevin) | Calibrated decision layer — scores through Devin's own model via ACP |
@@ -51,7 +51,7 @@ Devin's own session data into backups, search, metrics, memory and QA.
 | | [`devin-orchestrator`](https://github.com/Icaro0310/devin-orchestrator) | Background-worker fan-out — deterministic planner |
 | **Related** | [`poordjaevin`](https://github.com/Icaro0310/poordjaevin) | Calibrated decision layer via Devin's own model |
 | | [`devin-powerups`](https://github.com/Icaro0310/devin-powerups) | Maintainer hub — registry, scaffolder, reports |
-| | [`devin-office`](https://github.com/Icaro0310/devin-office) | Live Devin activity as an animated office |
+| | [`devin-office`](https://github.com/Icaro0310/devin-office) | Devin sessions and tools as an animated circuit board |
 | | [`qwenpaw-suite`](https://github.com/Icaro0310/qwenpaw-suite) | Optional add-on for self-hosted model operators |
 
 </details>
