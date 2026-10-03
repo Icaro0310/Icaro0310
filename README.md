@@ -7,8 +7,6 @@
 
 <h1><a href="https://www.linkedin.com/in/ícaro-galvão-do-nascimento-663601280/">Ícaro Galvão</a></h1>
 
-**Senior QA Engineer · Developer Tooling · AI Agents · Open Source**
-
 I build tools that make AI coding agents easier to inspect, evaluate and trust.
 Currently building the `devin-*` ecosystem — twenty local-first tools that turn
 Devin's own session data into backups, search, metrics, memory and QA.
@@ -40,6 +38,8 @@ Five projects that tell one story — **understand → verify → measure → co
 
 </div>
 
+<a id="catalog"></a>
+
 <details>
 <summary><b>Full catalog — 20 tools</b></summary>
 
@@ -52,14 +52,14 @@ Five projects that tell one story — **understand → verify → measure → co
 | **Insight** | [`devin-doctor`](https://github.com/Icaro0310/devin-doctor) | Diagnose a Devin install → concrete fixes |
 | | [`devin-history`](https://github.com/Icaro0310/devin-history) | Sessions → Markdown, JSON, CSV |
 | | [`devin-pm`](https://github.com/Icaro0310/devin-pm) | Project manager over sessions — rollups, milestones |
-| **Safety** | [`devin-backup`](https://github.com/Icaro0310/devin-backup) | Snapshot, verify, restore — schema-version manifests |
+| **Assurance** | [`devin-backup`](https://github.com/Icaro0310/devin-backup) | Snapshot, verify, restore — schema-version manifests |
 | | [`devin-metrics`](https://github.com/Icaro0310/devin-metrics) | Cost, tokens, sessions per project/model/day |
 | | [`devin-qa-pack`](https://github.com/Icaro0310/devin-qa-pack) | Claims vs. reality — PASS / PARTIAL / UNVERIFIED |
-| **Memory** | [`devin-evals`](https://github.com/Icaro0310/devin-evals) | Replay sessions against rubric graders |
-| | [`devin-graph`](https://github.com/Icaro0310/devin-graph) | Sessions ↔ projects ↔ files ↔ tools |
+| | [`devin-evals`](https://github.com/Icaro0310/devin-evals) | Replay sessions against rubric graders |
+| **Memory** | [`devin-graph`](https://github.com/Icaro0310/devin-graph) | Sessions ↔ projects ↔ files ↔ tools |
 | | [`devin-search`](https://github.com/Icaro0310/devin-search) | FTS5 full-text search across sessions |
-| **Agents** | [`devin-bridge`](https://github.com/Icaro0310/devin-bridge) | Policy-gated ACP client — allow / deny / ask |
 | | [`devin-memory`](https://github.com/Icaro0310/devin-memory) | Anti-poisoning memory — provenance, versioning |
+| **Control** | [`devin-bridge`](https://github.com/Icaro0310/devin-bridge) | Policy-gated ACP client — allow / deny / ask |
 | **Ops** | [`devin-janitor`](https://github.com/Icaro0310/devin-janitor) | Session lifecycle — export-then-delete, dry-run first |
 | | [`devin-orchestrator`](https://github.com/Icaro0310/devin-orchestrator) | Background-worker fan-out — deterministic planner |
 | **Related** | [`poordjaevin`](https://github.com/Icaro0310/poordjaevin) | Calibrated decision layer via Devin's own model |
