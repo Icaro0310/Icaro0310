@@ -29,6 +29,14 @@ Five projects that tell one story — **understand → verify → measure → co
 | [`devin-bridge`](https://github.com/Icaro0310/devin-bridge) | **Control the agent** | Drive Devin through ACP with explicit allow/deny/ask policies — enforcement in code, not instructions |
 | [`poordjaevin`](https://github.com/Icaro0310/poordjaevin) | **Judge the decision** | Calibrated decision layer on Devin's own model via ACP — measurable confidence (ECE 0.170 → 0.071) |
 
+<div align="center">
+
+<a href="https://icaro0310.github.io/demos/devin-office.html"><img src="assets/office-demo.gif" alt="devin-office — live Devin sessions, subagents and tools as an animated circuit board" width="80%"/></a>
+
+<sub>**devin-office** — live sessions, subagents and tools as an animated circuit board · [open the live demo](https://icaro0310.github.io/demos/devin-office.html)</sub>
+
+</div>
+
 <details>
 <summary><b>Full catalog — 20 tools</b></summary>
 
@@ -83,36 +91,54 @@ requires Python ≥ 3.10.
 **Windows:** same via `py -m pip install --user pipx`. Each README documents
 the exact data paths and `--data-dir` overrides for both systems.
 
-## The private runtime — the pattern, not the code
+## Runs on a personal machine?
 
-The public repos are the **tools**. A private runtime
-(`personal-agent-system`) drives them: hooks export session history on
-`SessionEnd`, a learning loop promotes recurring lessons to `learned-*`
-skills, an MCP memory store persists decisions, a heartbeat wakes a
-persistent session on a checklist, and poordjaevin answers cheap
-yes/no/rate questions through Devin's own model.
+On a machine you control, the same tools can be wired into a standing
+**personal agent runtime** — Devin plus a few optional companions, each
+adding one capability:
 
-The code stays private (machine paths, credentials); the **pattern** is
-public — every reusable piece is already in the catalog above.
+| Optional piece | What it adds |
+|---|---|
+| **Hooks** (`SessionEnd`, `Stop`, `UserPromptSubmit`) | Automatic history export and lesson extraction after every session |
+| **An MCP memory store** | Decisions and conventions that survive across sessions |
+| **A notes vault** (e.g. Obsidian) | Curated long-term memory — decisions, learnings, session transcripts |
+| **A scheduler** (cron / Task Scheduler) | A periodic "heartbeat" that wakes Devin with a checklist, and janitor runs |
+| **A comms channel** (e.g. Slack) | Talk to your agent and get notified remotely |
+| **`poordjaevin` as judge** | Cheap yes/no/rate answers — through Devin's own model via ACP, or a fully offline local model |
 
-<details>
-<summary><b>Português (BR)</b></summary>
+I run exactly this on my own machines — the driving repo
+(`personal-agent-system`) stays private because it contains machine paths
+and credentials, but the **pattern is the public part**: hooks + memory +
+vault + scheduler + judge, all built from the catalog above.
 
-<br/>
+## Português (BR)
 
-**Ícaro Galvão — QA Engineer.** Construo ferramentas *local-first* que
-tornam agentes de código mais observáveis, seguros e auditáveis.
+**Ícaro Galvão — Senior QA Engineer.** Construo ferramentas *local-first*
+que tornam agentes de código mais fáceis de inspecionar, avaliar e confiar.
 
-Os vinte projetos `devin-*` transformam os dados de sessão do próprio Devin
-em backups, busca, métricas, memória e QA — sem cloud, sem telemetria.
-Funcionam **só com o Devin**: sem VM, sem túnel, sem servidor de modelos.
+O ecossistema `devin-*` são vinte utilitários open source (MIT) que leem os
+dados locais do próprio Devin — sessões, stores SQLite, ACP — e os
+transformam em diagnóstico, histórico, backup, métricas, memória,
+verificação e dashboards. Tudo **sem cloud, sem telemetria, sem conta**.
 
-Instalação em **Windows e Linux**: Python ≥ 3.10 + `pipx`. Cada repo tem
-README em EN/PT-BR com paths exatos e a secção *Funciona só com o Devin*.
-O runtime pessoal não é publicado (credenciais/paths), mas o padrão está
-documentado em *The private runtime* acima.
+### Funciona só com o Devin?
 
-</details>
+Sim. Nenhuma ferramenta exige VM, túnel, servidor de modelos, Slack ou
+Obsidian — numa máquina corporativa travada o catálogo inteiro funciona.
+Instalação em **Windows e Linux** com Python ≥ 3.10 + `pipx`; cada README
+documenta os paths exatos (`~/.local/share/devin/cli/` no Linux,
+`%APPDATA%\devin\` no Windows) e os overrides `--data-dir`.
+
+### E numa máquina pessoal?
+
+Os mesmos utilitários viram um runtime de agente persistente: hooks exportam
+histórico e extraem lições ao fim de cada sessão, uma memória MCP guarda
+decisões entre sessões, um vault acumula notas curadas, um agendador dispara
+verificações periódicas, e um canal (Slack) permite falar com o agente à
+distância. O meu repositório de runtime é privado por conter credenciais —
+mas cada peça reutilizável está publicada no catálogo acima.
+
+---
 
 <div align="center">
 
