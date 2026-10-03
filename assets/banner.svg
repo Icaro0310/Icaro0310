@@ -1,0 +1,32 @@
+<svg width="1200" height="320" viewBox="0 0 1200 320" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="orb1" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" class="o1a"/>
+      <stop offset="100%" class="o1b"/>
+    </radialGradient>
+    <radialGradient id="orb2" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" class="o2a"/>
+      <stop offset="100%" class="o2b"/>
+    </radialGradient>
+    <style>
+      .bg{fill:#fbfbfd}
+      .o1a{stop-color:#0071e3;stop-opacity:.16}.o1b{stop-color:#0071e3;stop-opacity:0}
+      .o2a{stop-color:#bf5af2;stop-opacity:.10}.o2b{stop-color:#bf5af2;stop-opacity:0}
+      .t{fill:#1d1d1f;font:650 96px -apple-system,'SF Pro Display','Segoe UI','Helvetica Neue',Arial,sans-serif;letter-spacing:-3.5px}
+      .s{fill:#6e6e73;font:400 27px -apple-system,'SF Pro Text','Segoe UI','Helvetica Neue',Arial,sans-serif;letter-spacing:-.4px}
+      .a{fill:#0071e3}
+      .r{stroke:#d2d2d7;stroke-width:1}
+      @media (prefers-color-scheme:dark){
+        .bg{fill:#000}
+        .o1a{stop-opacity:.28}.o2a{stop-opacity:.18}
+        .t{fill:#f5f5f7}.s{fill:#a1a1a6}.a{fill:#2997ff}.r{stroke:#3a3a3c}
+      }
+    </style>
+  </defs>
+  <rect class="bg" width="1200" height="320"/>
+  <circle cx="985" cy="70" r="230" fill="url(#orb1)"/>
+  <circle cx="215" cy="290" r="200" fill="url(#orb2)"/>
+  <line x1="470" y1="238" x2="730" y2="238" class="r"/>
+  <text x="600" y="158" text-anchor="middle" class="t">devin-<tspan class="a">*</tspan></text>
+  <text x="600" y="208" text-anchor="middle" class="s">community tooling for Devin</text>
+</svg>
