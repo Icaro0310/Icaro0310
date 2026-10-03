@@ -19,13 +19,15 @@ Devin's own session data into backups, search, metrics, memory and QA.
 
 ## Selected work
 
-| | |
-|---|---|
-| [`devin-internals-spec`](https://github.com/Icaro0310/devin-internals-spec) | Devin's local stores, documented — schema detection, typed parsers, fixtures |
-| [`devin-office`](https://github.com/Icaro0310/devin-office) | Live Devin activity as an animated SVG circuit board — sessions, subagents, tools |
-| [`devin-doctor`](https://github.com/Icaro0310/devin-doctor) | `brew doctor` for a Devin install — stores, locks, config → concrete fixes |
-| [`devin-history`](https://github.com/Icaro0310/devin-history) | Session history → Markdown, JSON, CSV, Obsidian-ready |
-| [`poordjaevin`](https://github.com/Icaro0310/poordjaevin) | Calibrated decision layer — scores through Devin's own model via ACP |
+Five projects that tell one story — **understand → verify → measure → control → judge**:
+
+| | | |
+|---|---|---|
+| [`devin-internals-spec`](https://github.com/Icaro0310/devin-internals-spec) | **Understand the system** | Devin's local stores, documented — schema detection, typed parsers, contract boundary against drift |
+| [`devin-qa-pack`](https://github.com/Icaro0310/devin-qa-pack) | **Verify the agent** | Whether a session's claims are backed by actual tool-call evidence — PASS / PARTIAL / UNVERIFIED |
+| [`devin-evals`](https://github.com/Icaro0310/devin-evals) | **Measure the agent** | Replay recorded sessions against deterministic rubrics; agent quality as a regression signal |
+| [`devin-bridge`](https://github.com/Icaro0310/devin-bridge) | **Control the agent** | Drive Devin through ACP with explicit allow/deny/ask policies — enforcement in code, not instructions |
+| [`poordjaevin`](https://github.com/Icaro0310/poordjaevin) | **Judge the decision** | Calibrated decision layer on Devin's own model via ACP — measurable confidence (ECE 0.170 → 0.071) |
 
 <details>
 <summary><b>Full catalog — 20 tools</b></summary>
