@@ -1,24 +1,60 @@
 <div align="center">
 
-<img src="assets/banner.svg" alt="devin-* — community tooling for Devin" width="100%"/>
+<img src="assets/banner.svg" alt="Ícaro Galvão — devin-* ecosystem" width="100%"/>
+
+<h1><a href="https://www.linkedin.com/in/ícaro-galvão-do-nascimento-663601280/">Ícaro Galvão</a></h1>
+
+**Senior QA Engineer · Developer Tooling · AI Agents · Open Source**
+
+I build tools that make AI coding agents easier to inspect, evaluate and trust.
+Currently building the `devin-*` ecosystem — twenty local-first tools that turn
+Devin's own session data into backups, search, metrics, memory and QA.
+
+[Website](https://icaro0310.github.io) · [LinkedIn](https://www.linkedin.com/in/ícaro-galvão-do-nascimento-663601280/) · [Catalog](#catalog)
 
 [![MIT](https://img.shields.io/badge/license-MIT-1d1d1f?style=flat-square)](https://github.com/Icaro0310/devin-powerups/blob/main/LICENSE)
-[![20 tools](https://img.shields.io/badge/tools-20-0071e3?style=flat-square)](#catalog)
-[![Windows · Linux](https://img.shields.io/badge/windows_%C2%B7_linux-supported-86868b?style=flat-square)](#install)
-[![zero telemetry](https://img.shields.io/badge/telemetry-zero-34c759?style=flat-square)](#runs-on-devin-alone)
-
-**Twenty local-first tools that turn Devin's own session data into backups,
-search, metrics, memory and QA — no cloud, no telemetry, nothing to sign up for.**
-
-<h2><a href="https://www.linkedin.com/in/ícaro-galvão-do-nascimento-663601280/">Ícaro Galvão</a></h2>
-
-**QA Engineer**
-
-Unofficial community project. Not affiliated with, endorsed by, or sponsored by Cognition AI.
+[![local-first](https://img.shields.io/badge/local--first-zero%20telemetry-0071e3?style=flat-square)](#runs-on-devin-alone)
 
 </div>
 
+## Selected work
+
+| | |
+|---|---|
+| [`devin-internals-spec`](https://github.com/Icaro0310/devin-internals-spec) | Devin's local stores, documented — schema detection, typed parsers, fixtures |
+| [`devin-office`](https://github.com/Icaro0310/devin-office) | Pixel-art office rendering live Devin activity as animated characters |
+| [`devin-doctor`](https://github.com/Icaro0310/devin-doctor) | `brew doctor` for a Devin install — stores, locks, config → concrete fixes |
+| [`devin-history`](https://github.com/Icaro0310/devin-history) | Session history → Markdown, JSON, CSV, Obsidian-ready |
+| [`poordjaevin`](https://github.com/Icaro0310/poordjaevin) | Calibrated decision layer — scores through Devin's own model via ACP |
+
+<details>
+<summary><b>Full catalog — 20 tools</b></summary>
+
 <br/>
+
+| Wave | Repo | What it does |
+|---|---|---|
+| **Foundation** | [`devin-internals-spec`](https://github.com/Icaro0310/devin-internals-spec) | Store internals documented — schema detection, typed parsers |
+| | [`devin-redact`](https://github.com/Icaro0310/devin-redact) | Secret/PII redaction that understands tool-call semantics |
+| **Insight** | [`devin-doctor`](https://github.com/Icaro0310/devin-doctor) | Diagnose a Devin install → concrete fixes |
+| | [`devin-history`](https://github.com/Icaro0310/devin-history) | Sessions → Markdown, JSON, CSV |
+| | [`devin-pm`](https://github.com/Icaro0310/devin-pm) | Project manager over sessions — rollups, milestones |
+| **Safety** | [`devin-backup`](https://github.com/Icaro0310/devin-backup) | Snapshot, verify, restore — schema-version manifests |
+| | [`devin-metrics`](https://github.com/Icaro0310/devin-metrics) | Cost, tokens, sessions per project/model/day |
+| | [`devin-qa-pack`](https://github.com/Icaro0310/devin-qa-pack) | Claims vs. reality — PASS / PARTIAL / UNVERIFIED |
+| **Memory** | [`devin-evals`](https://github.com/Icaro0310/devin-evals) | Replay sessions against rubric graders |
+| | [`devin-graph`](https://github.com/Icaro0310/devin-graph) | Sessions ↔ projects ↔ files ↔ tools |
+| | [`devin-search`](https://github.com/Icaro0310/devin-search) | FTS5 full-text search across sessions |
+| **Agents** | [`devin-bridge`](https://github.com/Icaro0310/devin-bridge) | Policy-gated ACP client — allow / deny / ask |
+| | [`devin-memory`](https://github.com/Icaro0310/devin-memory) | Anti-poisoning memory — provenance, versioning |
+| **Ops** | [`devin-janitor`](https://github.com/Icaro0310/devin-janitor) | Session lifecycle — export-then-delete, dry-run first |
+| | [`devin-orchestrator`](https://github.com/Icaro0310/devin-orchestrator) | Background-worker fan-out — deterministic planner |
+| **Related** | [`poordjaevin`](https://github.com/Icaro0310/poordjaevin) | Calibrated decision layer via Devin's own model |
+| | [`devin-powerups`](https://github.com/Icaro0310/devin-powerups) | Maintainer hub — registry, scaffolder, reports |
+| | [`devin-office`](https://github.com/Icaro0310/devin-office) | Live Devin activity as an animated office |
+| | [`qwenpaw-suite`](https://github.com/Icaro0310/qwenpaw-suite) | Optional add-on for self-hosted model operators |
+
+</details>
 
 ## The method
 
@@ -32,132 +68,54 @@ that must pass three tests:
 All tools are **read-only by default** on Devin's local stores and send
 **zero telemetry**.
 
-## Install
-
-**Linux**
-
-```bash
-sudo apt install pipx python3-venv && pipx ensurepath     # Debian/Ubuntu
-pipx install "devin-doctor @ git+https://github.com/Icaro0310/devin-doctor.git"
-```
-
-**Windows**
-
-```powershell
-py -m pip install --user pipx && py -m pipx ensurepath
-pipx install "devin-doctor @ git+https://github.com/Icaro0310/devin-doctor.git"
-```
-
-Requires Python ≥ 3.10. Devin stores live at `~/.local/share/devin/cli/` +
-`~/.config/Devin/` (Linux) or `%APPDATA%\devin\` (Windows). `devin-bridge` is
-Node.js ≥ 20 — clone and `npm install -g .`. Each repo documents the exact
-paths it uses and its `--data-dir` override flags.
-
-## Catalog
-
-| Wave | Repo | What it does |
-|---|---|---|
-| **Foundation** | [`devin-internals-spec`](https://github.com/Icaro0310/devin-internals-spec) | Devin's store internals, documented — schema detection, typed parsers, fixtures |
-| | [`devin-redact`](https://github.com/Icaro0310/devin-redact) | Secret/PII redaction that understands tool-call semantics, in-place in SQLite |
-| **Insight** | [`devin-doctor`](https://github.com/Icaro0310/devin-doctor) | `brew doctor` for a Devin install — stores, locks, config → concrete fixes |
-| | [`devin-history`](https://github.com/Icaro0310/devin-history) | Session history → Markdown, JSON, CSV, Obsidian-ready |
-| | [`devin-pm`](https://github.com/Icaro0310/devin-pm) | Project manager over sessions — rollups, milestones, status reports |
-| **Safety** | [`devin-backup`](https://github.com/Icaro0310/devin-backup) | Snapshot, verify, restore, rotate — with schema-version manifests |
-| | [`devin-metrics`](https://github.com/Icaro0310/devin-metrics) | Cost, tokens, sessions per project/model/day — local only |
-| | [`devin-qa-pack`](https://github.com/Icaro0310/devin-qa-pack) | Claims vs. reality — PASS / PARTIAL / UNVERIFIED |
-| **Memory** | [`devin-evals`](https://github.com/Icaro0310/devin-evals) | Replay recorded sessions against rubric graders, deterministically |
-| | [`devin-graph`](https://github.com/Icaro0310/devin-graph) | Knowledge graph — sessions ↔ projects ↔ files ↔ tools |
-| | [`devin-search`](https://github.com/Icaro0310/devin-search) | FTS5 full-text search across every session |
-| **Agents** | [`devin-bridge`](https://github.com/Icaro0310/devin-bridge) | Policy-gated ACP client — allow / deny / ask rules |
-| | [`devin-memory`](https://github.com/Icaro0310/devin-memory) | Anti-poisoning memory — provenance, versioning, quarantine |
-| **Ops** | [`devin-janitor`](https://github.com/Icaro0310/devin-janitor) | Session lifecycle — export-then-delete, tiered, dry-run first |
-| | [`devin-orchestrator`](https://github.com/Icaro0310/devin-orchestrator) | Background-worker fan-out — deterministic planner, caps, no nesting |
-| **Related** | [`poordjaevin`](https://github.com/Icaro0310/poordjaevin) | Djævin — calibrated decision layer; scores through Devin's own model via ACP |
-| | [`devin-powerups`](https://github.com/Icaro0310/devin-powerups) | Maintainer hub — registry, scaffolder, weekly reports; fork it for your own family |
-| | [`devin-office`](https://github.com/Icaro0310/devin-office) | Pixel-art office rendering live Devin activity as animated characters |
-| | [`qwenpaw-suite`](https://github.com/Icaro0310/qwenpaw-suite) | Optional add-on — Ollama ↔ OpenAI bridge for operators who run their own model server |
-
 ## Runs on Devin alone?
 
-Yes. Every tool reads Devin's own local stores and needs **no VM, no tunnel,
-no model server, no Slack, no Obsidian**. On a locked-down corporate machine
-where none of those can be installed, the whole catalog still works.
+Yes — **no VM, no tunnel, no model server, no Slack, no Obsidian.** On a
+locked-down corporate machine the whole catalog still works. The exceptions
+are honest and documented per-repo: `devin-bridge` needs Node.js ≥ 20 (it is
+an ACP client for the Devin CLI itself); `poordjaevin` has a fully offline
+NLI fallback; `qwenpaw-suite` is a skippable add-on.
 
-- `devin-bridge` needs Node.js ≥ 20 — it is an ACP client for the Devin CLI
-  itself, so its dependency is still just Devin.
-- `poordjaevin` defaults to scoring through Devin's own model via ACP — no
-  model download, no extra key. `POORDJAEVIN_BACKEND=nli` switches to a fully
-  offline local model (~400 MB, one download).
-- `devin-powerups`' scheduled workflows (weekly report, email) are optional —
-  the registry and scaffolder run locally, and reports can be written to disk
-  from cron/Task Scheduler with no email at all.
-- `qwenpaw-suite` is for operators who already run their own model server.
-  Skip it freely.
-
-Each README has a *Works with Devin alone* section with the exact
-Windows/Linux paths it touches and honest caveats — `devin-janitor` deletes
-only under `--apply`; `devin-history` exports may contain prompts.
+**Linux:** `pipx install "devin-doctor @ git+https://github.com/Icaro0310/devin-doctor.git"` —
+requires Python ≥ 3.10.
+**Windows:** same via `py -m pip install --user pipx`. Each README documents
+the exact data paths and `--data-dir` overrides for both systems.
 
 ## The private runtime — the pattern, not the code
 
-The repos above are the **tools**. They get *driven* by a private repo,
-`personal-agent-system` — a personal agent runtime built on Devin Desktop.
-The code stays private (machine paths, tokens, credentials), but the
-**pattern** is public and replicable:
+The public repos are the **tools**. A private runtime
+(`personal-agent-system`) drives them: hooks export session history on
+`SessionEnd`, a learning loop promotes recurring lessons to `learned-*`
+skills, an MCP memory store persists decisions, a heartbeat wakes a
+persistent session on a checklist, and poordjaevin answers cheap
+yes/no/rate questions through Devin's own model.
 
-```
-you ──► Devin Desktop (IDE / ACP sessions)
-          │
-          ├─ hooks: SessionEnd → export history → notes
-          │          PromptSubmit/Stop → lesson extractor → learned-* skills
-          │
-          ├─ MCP servers: persistent memory · vault · unified tools
-          │
-          ├─ Slack gateway: DM poll → mailbox → wakes a persistent
-          │   Devin session → replies land back in Slack
-          │
-          ├─ heartbeat (cron): every 30 min wakes the session with a
-          │   checklist; notifies only if something is urgent
-          │
-          └─ local judge: poordjaevin (public above) answers cheap
-              yes/no/rate questions through Devin's own model
-```
-
-Rebuilding your own ≈ hooks + one MCP memory store + one comms channel +
-one scheduled checklist. Every reusable piece is already in the public
-catalog above.
-
-<br/>
+The code stays private (machine paths, credentials); the **pattern** is
+public — every reusable piece is already in the catalog above.
 
 <details>
 <summary><b>Português (BR)</b></summary>
 
 <br/>
 
-Ferramentas de comunidade para o [Devin](https://devin.ai), agente de código
-da Cognition AI. **Sem afiliação com a Cognition.**
+**Ícaro Galvão — QA Engineer.** Construo ferramentas *local-first* que
+tornam agentes de código mais observáveis, seguros e auditáveis.
 
-Vinte utilitários *local-first* que transformam os dados de sessão do próprio
-Devin em backups, busca, métricas, memória e QA — sem cloud, sem telemetria.
-Funcionam **só com o Devin**: sem VM, sem túnel, sem servidor de modelos,
-sem Slack, sem Obsidian.
+Os vinte projetos `devin-*` transformam os dados de sessão do próprio Devin
+em backups, busca, métricas, memória e QA — sem cloud, sem telemetria.
+Funcionam **só com o Devin**: sem VM, sem túnel, sem servidor de modelos.
 
-Instalação em **Windows e Linux**: Python ≥ 3.10 + `pipx` (ver *Install*
-acima). Cada repo tem README em EN/PT-BR com instruções completas e uma
-secção *Funciona só com o Devin* com os paths exatos de cada sistema.
-
-O runtime pessoal (`personal-agent-system`) não é publicado — contém
-credenciais e paths da minha máquina — mas o **padrão** está documentado em
-*The private runtime* acima. Cada peça reutilizável já está no catálogo.
+Instalação em **Windows e Linux**: Python ≥ 3.10 + `pipx`. Cada repo tem
+README em EN/PT-BR com paths exatos e a secção *Funciona só com o Devin*.
+O runtime pessoal não é publicado (credenciais/paths), mas o padrão está
+documentado em *The private runtime* acima.
 
 </details>
 
-<br/>
-
----
-
 <div align="center">
 
-<sub>Devin is a trademark of Cognition AI. This is a community project.</sub>
+<img src="https://github-readme-stats.vercel.app/api?username=Icaro0310&show_icons=false&hide_border=true&hide_title=true&theme=transparent&count_private=true&include_all_commits=true" height="120" alt=""/>
+
+<sub>Devin is a trademark of Cognition AI. Community project — not affiliated.</sub>
 
 </div>
