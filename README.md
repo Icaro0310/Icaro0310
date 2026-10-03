@@ -107,19 +107,36 @@ yours. Each optional piece adds one capability — none is required:
 
 ### On a corporate machine
 
-On a locked-down machine you get the tools **on demand**, not the standing
-runtime:
+On a locked-down machine the catalog runs **on demand** and most of the
+runtime can still be reconstructed locally:
 
-- Everything in the catalog still runs — same commands, same local stores.
-- **Scheduler unavailable or restricted** → no automatic heartbeat; run
-  `devin-janitor --dry-run`, exports and reports manually instead.
-- **No third-party apps** → Slack remote control and the Obsidian vault are
-  out; the MCP memory store still works if the Devin config dir is writable.
-- **Outbound restrictions** → every tool is offline-capable; nothing in the
-  catalog needs a network call.
+- **Memory and learning are unaffected.** Hooks are event-driven
+  (`UserPromptSubmit`, `Stop`, `SessionEnd`), so prompt logging, lesson
+  extraction and history export keep working without any scheduler. The
+  MCP memory store and `learned-*` skills only need a writable Devin
+  config directory.
+- **Proactivity is mostly recoverable.** Instead of a cron heartbeat,
+  elapsed-time checks can piggyback on `UserPromptSubmit` — a checklist
+  runs whenever you are active, which is when it matters. A persistent
+  background loop (`while sleep; do devin acp …`) is equivalent while the
+  machine is on.
+- **Outbound restrictions are a non-issue** — nothing in the catalog makes
+  a network call.
 
-That is the design constraint the ecosystem is built around: the runtime is
-an enhancement, never a dependency.
+What a corporate machine genuinely cannot provide:
+
+- **Wake-while-idle.** With no scheduler and the session closed, nothing
+  ticks — a suspended laptop has no heartbeat.
+- **Remote reach.** Without Slack (or any comms channel), the agent can
+  detect something urgent but cannot reach you. Deferred notification —
+  flag files read on your next prompt — works, but late.
+- **Offload.** Heavy work (browser automation, builds) runs locally and
+  competes for the machine's RAM.
+- **Multi-machine topology.** No tunnel means `devin-office` probes and
+  hubs are confined to loopback.
+
+The runtime is an enhancement, never a dependency — roughly 90% of it
+survives a locked-down machine.
 
 ## Português (BR)
 
@@ -147,12 +164,20 @@ guarda decisões entre sessões, um vault (ex.: Obsidian) acumula notas
 curadas, um agendador dispara checklists periódicos, e um canal como o
 Slack permite falar com o agente à distância.
 
-Numa **máquina corporativa** o catálogo continua inteiro sob demanda — o
-que muda é o runtime permanente: sem agendador não há heartbeat automático
-(rodar `devin-janitor --dry-run` e exports manualmente), sem apps de
-terceiros ficam fora o canal Slack e o vault, e mesmo com restrições de
-rede nada no catálogo precisa de chamada externa. O runtime é um upgrade,
-nunca uma dependência.
+### Numa máquina corporativa
+
+O catálogo funciona sob demanda e a maior parte do runtime se reconstrói
+localmente: memória e aprendizado são intocados (hooks são disparados por
+eventos, não por tempo), a proatividade se recupera com verificações de
+tempo decorrido dentro dos próprios prompts ou um loop em background, e
+nada exige rede externa.
+
+As perdas reais são quatro: **acordar em idle** (máquina suspensa não tem
+heartbeat), **alcance remoto** (sem Slack o agente detecta o urgente mas
+não te avisa em tempo real — notificação diferida via flag lida no próximo
+prompt), **offload** (trabalho pesado compete pela RAM local) e
+**topologia multi-máquina** (probes do `devin-office` ficam em loopback).
+O runtime é um upgrade, nunca uma dependência.
 
 ---
 
