@@ -19,17 +19,27 @@ artifacts listed in the catalog.
 
 </div>
 
+## Start here
+
+New to the ecosystem? Follow the shortest path:
+
+1. [`devin-doctor`](https://github.com/Icaro0310/devin-doctor) — diagnose the local Devin install and confirm the stores are healthy.
+2. [`devin-qa-pack`](https://github.com/Icaro0310/devin-qa-pack) — the flagship audit: verify what an agent claimed against tool-call evidence.
+3. [`devin-office`](https://github.com/Icaro0310/devin-office) — watch live sessions, subagents and tools as an animated circuit board.
+4. [`awesome-devin`](https://github.com/Icaro0310/awesome-devin) — browse the curated hub for every tool, guide and related resource.
+
 ## Selected work
 
-Five projects that tell one story — **understand → verify → measure → control → judge**:
+Six projects that show the product path — **diagnose → audit → watch → understand → evaluate → protect**:
 
 | | | |
 |---|---|---|
+| [`devin-qa-pack`](https://github.com/Icaro0310/devin-qa-pack) | **Audit the agent** | Flagship evidence gate — PASS / PARTIAL / UNVERIFIED from recorded tool calls |
+| [`devin-doctor`](https://github.com/Icaro0310/devin-doctor) | **Diagnose the install** | `brew doctor` for Devin's local stores, schema, locks, config and disk |
+| [`devin-office`](https://github.com/Icaro0310/devin-office) | **Watch the runtime** | Live sessions, subagents and tools rendered as an animated circuit board |
 | [`devin-internals-spec`](https://github.com/Icaro0310/devin-internals-spec) | **Understand the system** | Devin's local stores, documented — schema detection, typed parsers, contract boundary against drift |
-| [`devin-qa-pack`](https://github.com/Icaro0310/devin-qa-pack) | **Verify the agent** | Whether a session's claims are backed by actual tool-call evidence — PASS / PARTIAL / UNVERIFIED |
-| [`devin-evals`](https://github.com/Icaro0310/devin-evals) | **Measure the agent** | Replay recorded sessions against deterministic rubrics; agent quality as a regression signal |
-| [`devin-bridge`](https://github.com/Icaro0310/devin-bridge) | **Control the agent** | Drive Devin through ACP with explicit allow/deny/ask policies — enforcement in code, not instructions |
-| [`poordjaevin`](https://github.com/Icaro0310/poordjaevin) | **Judge the decision** | Calibrated decision layer on Devin's own model via ACP — measurable confidence (ECE 0.170 → 0.071) |
+| [`devin-evals`](https://github.com/Icaro0310/devin-evals) | **Evaluate quality** | Replay recorded sessions against deterministic rubrics; agent quality as a regression signal |
+| [`devin-redact`](https://github.com/Icaro0310/devin-redact) | **Protect the evidence** | Secret/PII redaction that understands tool-call semantics before exports leave the machine |
 
 <div align="center">
 
@@ -54,8 +64,8 @@ Five projects that tell one story — **understand → verify → measure → co
 | **Operations** | [`devin-history`](https://github.com/Icaro0310/devin-history) | Export and audit Devin session history — markdown notes, JSON, CSV, Obsidian-ready. |
 | **QA** | [`devin-doctor`](https://github.com/Icaro0310/devin-doctor) | Diagnose a Devin Desktop installation: stores, schema, locks, config, disk — with fix suggestions. |
 | **Operations** | [`devin-pm`](https://github.com/Icaro0310/devin-pm) | Project manager over sessions: per-repo rollups, milestones, status reports, registry.json. |
-| **QA** | [`devin-qa-pack`](https://github.com/Icaro0310/devin-qa-pack) | QA pack: verifies session deliverable claims against tool-call ground truth. |
-| **Evaluation** | [`devin-metrics`](https://github.com/Icaro0310/devin-metrics) | Local-only usage metrics: cost, tokens, sessions per project/model/day; zero telemetry. Includes an optional dashboard subpackage and command. |
+| **QA** | [`devin-qa-pack`](https://github.com/Icaro0310/devin-qa-pack) | Flagship QA audit: verifies session deliverable claims against tool-call ground truth and reports PASS/PARTIAL/UNVERIFIED. |
+| **Evaluation** | [`devin-metrics`](https://github.com/Icaro0310/devin-metrics) | Local-only session observability: activity, context size, and token peaks per project/model/day; zero telemetry. Devin does not persist cost fields, so cost is not claimed. Includes an optional dashboard subpackage and command. |
 | **Operations** | [`devin-backup`](https://github.com/Icaro0310/devin-backup) | Safe snapshot/verify/restore/rotate of Devin stores with schema-version manifests. |
 | **Memory** | [`devin-search`](https://github.com/Icaro0310/devin-search) | FTS5 full-text search across all Devin sessions, role-tagged and project-filtered. |
 | **Memory** | [`devin-graph`](https://github.com/Icaro0310/devin-graph) | Knowledge graph: sessions, projects, files touched, tools used — queryable edges. |
@@ -68,7 +78,7 @@ Five projects that tell one story — **understand → verify → measure → co
 | **Evaluation** | [`devin-dream`](https://github.com/Icaro0310/devin-dream) | Synthetic Devin sessions with known verdicts — labeled defects (D01-D09), adversarial inject mode, and fleet generation. Regression/adversarial test data for the catalog. |
 | **Governance** | [`devin-switch`](https://github.com/Icaro0310/devin-switch) | Switch between Devin configuration profiles (hooks, MCP, models) with snapshot, sha256 verify, atomic write, journal and rollback. Dry-run by default; secrets never printed. |
 | **Governance** | [`devin-skill-catalog`](https://github.com/Icaro0310/devin-skill-catalog) | Lifecycle + quality gates for .devin skills/rules: scan, lint, diff, G1/G2 gates, quarantined→approved→active lifecycle, sha256-verified export/import bundles (imports land quarantined). |
-| **Distribution** | [`devin-devkit`](https://github.com/Icaro0310/devin-devkit) | Profile-based Windows/Linux installer for the public Devin tools; reads the registry manifest and installs isolated CLIs with uv, plus the Node bridge with npm. |
+| **Distribution** | [`devin-devkit`](https://github.com/Icaro0310/devin-devkit) | Profile-based installer for the public Devin tools across Linux, Personal Windows and Corporate Windows; reads the registry manifest and installs isolated CLIs with uv, plus the Node bridge with npm. |
 | **Maintainer hub** | [`devin-powerups`](https://github.com/Icaro0310/devin-powerups) | Public maintainer hub: registry, roadmap, project template, scaffolder, release checks, and community catalog generators. |
 | **Related Suite** | [`qwenpaw-suite`](https://github.com/Icaro0310/qwenpaw-suite) | Optional QwenPaw add-on for self-hosted model operators. Includes the local-model bridge, health checks, and GitHub/local documentation sync. |
 | **Related Tool** | [`poordjaevin`](https://github.com/Icaro0310/poordjaevin) | Djævin: fork of poordjaevin adding a Devin ACP backend (uses the model Devin already runs, no extra download); local NLI backend stays as fully-offline fallback. |
