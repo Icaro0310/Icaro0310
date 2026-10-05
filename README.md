@@ -89,13 +89,30 @@ that must pass three tests:
 All tools are **read-only by default** on Devin's local stores and send
 **zero telemetry**.
 
+## Three execution environments
+
+The same ecosystem runs under three declared environments rather than three
+separate products:
+
+| Environment | Runtime | Guarantees |
+|---|---|---|
+| **Linux** | Extended | Local execution plus optional Devin VM/QwenPaw delegation when a tool supports it |
+| **Personal Windows** | Extended | Local Windows execution plus optional delegated workloads and Linux-compatible VM tooling |
+| **Corporate Windows** | Local-only | No VM, QwenPaw, Slack dependency, external compute or workload delegation |
+
+The registry records compatibility per tool. `devin-devkit` selects the mode
+with `--environment linux`, `--environment personal-windows`, or
+`--environment corporate-windows`; corporate mode is explicit because the OS
+alone cannot distinguish a personal Windows machine from a restricted one.
+
 ## Runs on Devin alone?
 
-Yes — **no VM, no tunnel, no model server, no Slack, no Obsidian.** On a
-locked-down corporate machine the whole catalog still works. The exceptions
-are honest and documented per-repo: `devin-bridge` needs Node.js ≥ 20 (it is
-an ACP client for the Devin CLI itself); `poordjaevin` has a fully offline
-NLI fallback; `qwenpaw-suite` is a skippable add-on.
+Yes — **no VM, no tunnel, no model server, no Slack, no Obsidian.** The
+DevKit-installable catalog still works on a locked-down corporate machine.
+The exceptions are explicit in the registry: `devin-bridge` needs Node.js
+≥ 20 (it is an ACP client for the Devin CLI itself); `poordjaevin` has a
+fully offline NLI fallback; `qwenpaw-suite` is an optional related suite and
+is unsupported in Corporate Windows.
 
 **Linux:** `pipx install "devin-doctor @ git+https://github.com/Icaro0310/devin-doctor.git"` —
 requires Python ≥ 3.10.
@@ -149,12 +166,14 @@ What a corporate machine genuinely cannot provide:
 The runtime is an enhancement, never a dependency — roughly 90% of it
 survives a locked-down machine.
 
-## Windows and Linux
+## Windows and Linux documentation
 
-The public tools target Windows and Linux. Shared purpose and usage stay in
-`README.md`; each repository's `README.windows.md` and `README.linux.md` carry
-only operating-system-specific installation, Devin paths, PATH setup,
-scheduling, and troubleshooting. macOS is planned but not yet claimed as tested.
+The public tools target Linux, Personal Windows and Corporate Windows. Shared
+purpose and usage stay in `README.md`; each repository's Windows and Linux
+guides carry platform-specific installation, Devin paths, PATH setup,
+scheduling, and troubleshooting. The DevKit additionally documents the
+corporate local-only mode and a registry-generated compatibility matrix.
+macOS is planned but not yet claimed as tested.
 
 ---
 
