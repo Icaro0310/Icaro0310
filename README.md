@@ -49,11 +49,30 @@ Six projects that show the product path — **diagnose → audit → watch → u
 
 </div>
 
+## Install the ecosystem
+
+One registry ([`devin-powerups`](https://github.com/Icaro0310/devin-powerups)) is
+the source of truth; [`devin-devkit`](https://github.com/Icaro0310/devin-devkit)
+is the distribution layer that installs it under three declared environments:
+
+| Environment | Runtime | Install |
+|---|---|---|
+| **Linux** | Extended | `devin-devkit install full --environment linux` |
+| **Personal Windows** | Extended | `devin-devkit install full --environment personal-windows` |
+| **Corporate Windows** | Local-only | `devin-devkit install full --environment corporate-windows` |
+
+Extended mode runs locally plus optional Devin VM/QwenPaw delegation where a
+tool supports it. Corporate Windows is **local-only**: no VM, QwenPaw, Slack
+dependency, external compute or workload delegation — and it is selected
+explicitly, because the OS alone cannot distinguish a personal Windows machine
+from a restricted one. The registry records per-tool compatibility; the DevKit
+previews the plan before installing (`--apply` to commit).
+
 <a id="catalog"></a>
 
 <details>
 <!-- DEVIN-CATALOG:BEGIN -->
-<summary><b>Full catalog — 19 Devin tools + 1 distribution + 1 maintainer hub + 3 related artifacts (24 entries)</b></summary>
+<summary><b>The ecosystem — 19 first-party tools · 1 distribution layer · 1 registry hub · 3 related artifacts (24 entries)</b></summary>
 
 <br/>
 
@@ -98,22 +117,6 @@ that must pass three tests:
 
 All tools are **read-only by default** on Devin's local stores and send
 **zero telemetry**.
-
-## Three execution environments
-
-The same ecosystem runs under three declared environments rather than three
-separate products:
-
-| Environment | Runtime | Guarantees |
-|---|---|---|
-| **Linux** | Extended | Local execution plus optional Devin VM/QwenPaw delegation when a tool supports it |
-| **Personal Windows** | Extended | Local Windows execution plus optional delegated workloads and Linux-compatible VM tooling |
-| **Corporate Windows** | Local-only | No VM, QwenPaw, Slack dependency, external compute or workload delegation |
-
-The registry records compatibility per tool. `devin-devkit` selects the mode
-with `--environment linux`, `--environment personal-windows`, or
-`--environment corporate-windows`; corporate mode is explicit because the OS
-alone cannot distinguish a personal Windows machine from a restricted one.
 
 ## Runs on Devin alone?
 
