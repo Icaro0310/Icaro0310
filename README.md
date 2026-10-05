@@ -10,7 +10,7 @@
 I build tools that make AI coding agents easier to inspect, evaluate and trust.
 Currently building 19 public `devin-*` tools for Devin's local session data,
 with a separate profile-based DevKit distribution, maintainer hub and related
-projects listed in the catalog.
+artifacts listed in the catalog.
 
 [Website](https://icaro0310.github.io) · [LinkedIn](https://www.linkedin.com/in/ícaro-galvão-do-nascimento-663601280/) · [Catalog](#catalog)
 
@@ -43,7 +43,7 @@ Five projects that tell one story — **understand → verify → measure → co
 
 <details>
 <!-- DEVIN-CATALOG:BEGIN -->
-<summary><b>Full catalog — 19 Devin tools + 1 distribution + 1 maintainer hub + 3 related projects (24 entries)</b></summary>
+<summary><b>Full catalog — 19 Devin tools + 1 distribution + 1 maintainer hub + 3 related artifacts (24 entries)</b></summary>
 
 <br/>
 
@@ -70,9 +70,9 @@ Five projects that tell one story — **understand → verify → measure → co
 | **Governance** | [`devin-skill-catalog`](https://github.com/Icaro0310/devin-skill-catalog) | Lifecycle + quality gates for .devin skills/rules: scan, lint, diff, G1/G2 gates, quarantined→approved→active lifecycle, sha256-verified export/import bundles (imports land quarantined). |
 | **Distribution** | [`devin-devkit`](https://github.com/Icaro0310/devin-devkit) | Profile-based Windows/Linux installer for the public Devin tools; reads the registry manifest and installs isolated CLIs with uv, plus the Node bridge with npm. |
 | **Maintainer hub** | [`devin-powerups`](https://github.com/Icaro0310/devin-powerups) | Public maintainer hub: registry, roadmap, project template, scaffolder, release checks, and community catalog generators. |
-| **Related** | [`qwenpaw-suite`](https://github.com/Icaro0310/qwenpaw-suite) | Optional QwenPaw add-on for self-hosted model operators. Includes the local-model bridge, health checks, and GitHub/local documentation sync. |
-| **Related** | [`poordjaevin`](https://github.com/Icaro0310/poordjaevin) | Djævin: fork of poordjaevin adding a Devin ACP backend (uses the model Devin already runs, no extra download); local NLI backend stays as fully-offline fallback. |
-| **Related** | [`awesome-devin`](https://github.com/Icaro0310/awesome-devin) | Curated awesome-list of Devin tooling and resources (CC0). |
+| **Related Suite** | [`qwenpaw-suite`](https://github.com/Icaro0310/qwenpaw-suite) | Optional QwenPaw add-on for self-hosted model operators. Includes the local-model bridge, health checks, and GitHub/local documentation sync. |
+| **Related Tool** | [`poordjaevin`](https://github.com/Icaro0310/poordjaevin) | Djævin: fork of poordjaevin adding a Devin ACP backend (uses the model Devin already runs, no extra download); local NLI backend stays as fully-offline fallback. |
+| **Related Resource** | [`awesome-devin`](https://github.com/Icaro0310/awesome-devin) | Curated awesome-list of Devin tooling and resources (CC0). |
 <!-- DEVIN-CATALOG:END -->
 
 </details>
