@@ -201,6 +201,7 @@ macOS is planned but not yet claimed as tested.
 <div align="center">
 
 <img src="https://github-readme-stats.vercel.app/api?username=Icaro0310&show_icons=false&hide_border=true&hide_title=true&theme=transparent&count_private=true&include_all_commits=true&cache_seconds=1800" height="120" alt=""/>
+<img src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fapi.github.com%2Fusers%2FIcaro0310&query=%24.public_repos&label=public%20repos&style=flat-square&color=555&labelColor=555&cacheSeconds=1800" height="22" alt="public repos"/>
 
 <sub>Devin is a trademark of Cognition AI. Community project — not affiliated.</sub>
 
