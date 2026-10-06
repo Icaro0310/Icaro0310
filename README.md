@@ -22,17 +22,6 @@ artifacts listed in the catalog.
 
 </div>
 
-## Start here
-
-New to the ecosystem? Follow the shortest path:
-
-1. [`devin-qa-pack`](https://github.com/Icaro0310/devin-qa-pack) — the flagship audit: verify what an agent claimed against tool-call evidence, reported as PASS / PARTIAL / UNVERIFIED.
-2. [`awesome-devin`](https://github.com/Icaro0310/awesome-devin) — browse the curated hub for every tool, environment guide and related resource.
-3. [`devin-evals`](https://github.com/Icaro0310/devin-evals) — deterministic eval harness: replay recorded Devin sessions against rubric graders.
-4. [`devin-internals-spec`](https://github.com/Icaro0310/devin-internals-spec) — documented internals of Devin Desktop/CLI stores with schema-version detection.
-5. [`devin-bridge`](https://github.com/Icaro0310/devin-bridge) — policy-gated ACP client for the Devin CLI: isolated sessions with allow/deny/ask rules.
-6. [`poordjaevin`](https://github.com/Icaro0310/poordjaevin) — Djævin: calibrated local-first decision layer with a Devin ACP backend — no API key needed.
-
 ## Selected work
 
 Six projects that show the assurance path — **understand → verify → measure → control → protect → judge**:
