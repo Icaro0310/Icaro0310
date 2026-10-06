@@ -48,7 +48,7 @@ Six projects that show the assurance path — **understand → verify → measur
 
 <a href="https://icaro0310.github.io/demos/devin-office.html"><img src="assets/office-demo.gif" alt="devin-office — live Devin sessions, subagents and tools as an animated circuit board" width="80%"/></a>
 
-<sub>**devin-office** — live sessions, subagents and tools as an animated circuit board · [open the live demo](https://icaro0310.github.io/demos/devin-office.html)</sub>
+<sub>**devin-office** — live sessions as a circuit board (above) and a local session kanban (RUNNING · BLOCKED · REVIEW · CLOSED) for checking live work · [open the kanban live demo](https://icaro0310.github.io/demos/devin-office-kanban.html)</sub>
 
 </div>
 
@@ -200,7 +200,7 @@ macOS is planned but not yet claimed as tested.
 
 <div align="center">
 
-<img src="https://github-readme-stats.vercel.app/api?username=Icaro0310&show_icons=false&hide_border=true&hide_title=true&theme=transparent&count_private=true&include_all_commits=true" height="120" alt=""/>
+<img src="https://github-readme-stats.vercel.app/api?username=Icaro0310&show_icons=false&hide_border=true&hide_title=true&theme=transparent&count_private=true&include_all_commits=true&cache_seconds=1800" height="120" alt=""/>
 
 <sub>Devin is a trademark of Cognition AI. Community project — not affiliated.</sub>
 
