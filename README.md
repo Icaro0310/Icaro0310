@@ -30,16 +30,16 @@ New to the ecosystem? Follow the shortest path:
 
 ## Selected work
 
-Six projects that show the product path — **diagnose → audit → watch → understand → evaluate → protect**:
+Six projects that show the assurance path — **understand → verify → measure → control → protect → judge**:
 
 | | | |
 |---|---|---|
-| [`devin-qa-pack`](https://github.com/Icaro0310/devin-qa-pack) | **Audit the agent** | Flagship evidence gate — PASS / PARTIAL / UNVERIFIED from recorded tool calls |
-| [`devin-doctor`](https://github.com/Icaro0310/devin-doctor) | **Diagnose the install** | `brew doctor` for Devin's local stores, schema, locks, config and disk |
-| [`devin-office`](https://github.com/Icaro0310/devin-office) | **Watch the runtime** | Live sessions, subagents and tools rendered as an animated circuit board |
 | [`devin-internals-spec`](https://github.com/Icaro0310/devin-internals-spec) | **Understand the system** | Devin's local stores, documented — schema detection, typed parsers, contract boundary against drift |
-| [`devin-evals`](https://github.com/Icaro0310/devin-evals) | **Evaluate quality** | Replay recorded sessions against deterministic rubrics; agent quality as a regression signal |
+| [`devin-qa-pack`](https://github.com/Icaro0310/devin-qa-pack) | **Verify the agent** | Flagship evidence gate — PASS / PARTIAL / UNVERIFIED from recorded tool calls |
+| [`devin-evals`](https://github.com/Icaro0310/devin-evals) | **Measure quality** | Replay recorded sessions against deterministic rubrics; agent quality as a regression signal |
+| [`devin-bridge`](https://github.com/Icaro0310/devin-bridge) | **Control execution** | Policy-gated ACP client — allow / deny / ask, fail-closed, per-repo session isolation |
 | [`devin-redact`](https://github.com/Icaro0310/devin-redact) | **Protect the evidence** | Secret/PII redaction that understands tool-call semantics before exports leave the machine |
+| [`poordjaevin`](https://github.com/Icaro0310/poordjaevin) | **Judge decisions** | Calibrated yes/no/score answers for agentic workflows — measured ECE 0.170 → 0.071 on the shipped eval set |
 
 <div align="center">
 
@@ -115,8 +115,9 @@ that must pass three tests:
 2. the extra disappears without Devin
 3. explainable in one sentence
 
-All tools are **read-only by default** on Devin's local stores and send
-**zero telemetry**.
+Tools are **local-first** and send **zero telemetry**. Destructive or
+mutating operations are explicit, guarded, and dry-run by default where
+applicable.
 
 ## Runs on Devin alone?
 
@@ -161,8 +162,10 @@ runtime can still be reconstructed locally:
   runs whenever you are active, which is when it matters. A persistent
   background loop (`while sleep; do devin acp …`) is equivalent while the
   machine is on.
-- **Outbound restrictions are a non-issue** — nothing in the catalog makes
-  a network call.
+- **Outbound restrictions are a non-issue** — the read/audit tools run
+  fully offline. Only explicit opt-ins touch the network: `devin-devkit`
+  downloads installs over HTTPS and `devin-bridge` speaks ACP to the
+  local Devin CLI.
 
 What a corporate machine genuinely cannot provide:
 
