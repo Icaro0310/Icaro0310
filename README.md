@@ -68,7 +68,7 @@ previews the plan before installing (`--apply` to commit).
 
 <details>
 <!-- DEVIN-CATALOG:BEGIN -->
-<summary><b>The ecosystem — 19 first-party tools · 1 distribution layer · 1 registry hub · 3 related artifacts (24 entries)</b></summary>
+<summary><b>The ecosystem — 19 first-party tools · 3 distribution layers · 1 registry hub · 3 related artifacts (26 entries)</b></summary>
 
 <br/>
 
@@ -94,6 +94,8 @@ previews the plan before installing (`--apply` to commit).
 | **Governance** | [`devin-switch`](https://github.com/Icaro0310/devin-switch) | Switch between Devin configuration profiles (hooks, MCP, models) with snapshot, sha256 verify, atomic write, journal and rollback. Dry-run by default; secrets never printed. |
 | **Governance** | [`devin-skill-catalog`](https://github.com/Icaro0310/devin-skill-catalog) | Lifecycle + quality gates for .devin skills/rules: scan, lint, diff, G1/G2 gates, quarantined→approved→active lifecycle, sha256-verified export/import bundles (imports land quarantined). |
 | **Distribution** | [`devin-devkit`](https://github.com/Icaro0310/devin-devkit) | Profile-based installer for the public Devin tools across Linux, Personal Windows and Corporate Windows; reads the registry manifest and installs isolated CLIs with uv, plus the Node bridge with npm. |
+| **Distribution** | [`homebrew-tap`](https://github.com/Icaro0310/homebrew-tap) | Homebrew tap with formulas for the public devin-* CLIs; install on Linux or macOS via `brew install Icaro0310/tap/<tool>`. Content is written by release automation, consumed read-only. |
+| **Distribution** | [`scoop-bucket`](https://github.com/Icaro0310/scoop-bucket) | Scoop bucket with manifests for the public devin-* CLIs on Windows; install via `scoop install Icaro0310/<tool>`. Content is written by release automation, consumed read-only. |
 | **Maintainer hub** | [`devin-powerups`](https://github.com/Icaro0310/devin-powerups) | Public maintainer hub: registry, roadmap, project template, scaffolder, release checks, and community catalog generators. |
 | **Related Suite** | [`qwenpaw-suite`](https://github.com/Icaro0310/qwenpaw-suite) | Optional QwenPaw add-on for self-hosted model operators. Includes the local-model bridge, health checks, and GitHub/local documentation sync. |
 | **Related Tool** | [`poordjaevin`](https://github.com/Icaro0310/poordjaevin) | Djævin: fork of poordjaevin adding a Devin ACP backend (uses the model Devin already runs, no extra download); local NLI backend stays as fully-offline fallback. |
