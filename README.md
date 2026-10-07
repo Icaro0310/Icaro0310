@@ -68,7 +68,7 @@ previews the plan before installing (`--apply` to commit).
 
 <details>
 <!-- DEVIN-CATALOG:BEGIN -->
-<summary><b>The ecosystem — 19 first-party tools · 3 distribution layer · 1 registry hub · 3 related artifacts (26 entries)</b></summary>
+<summary><b>The ecosystem — 19 first-party tools · 3 distribution layers · 1 registry hub · 3 related artifacts (26 entries)</b></summary>
 
 <br/>
 
