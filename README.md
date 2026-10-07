@@ -8,7 +8,7 @@
 <h1><a href="https://www.linkedin.com/in/ícaro-galvão-do-nascimento-663601280/">Ícaro Galvão</a></h1>
 
 I build tools that make AI coding agents easier to inspect, evaluate and trust.
-Currently building 19 public `devin-*` tools for Devin's local session data,
+Currently building public `devin-*` tools for Devin's local session data,
 with a separate profile-based DevKit distribution, maintainer hub and related
 artifacts listed in the catalog.
 
