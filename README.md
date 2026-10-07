@@ -37,9 +37,9 @@ Six projects that show the assurance path — **understand → verify → measur
 
 <div align="center">
 
-<a href="https://icaro0310.github.io/demos/devin-office.html"><img src="assets/office-demo.gif" alt="devin-office — live Devin sessions, subagents and tools as an animated circuit board" width="80%"/></a>
+<a href="https://icaro0310.github.io/demos/devin-office.html"><img src="assets/office-demo.gif" alt="devin-office demo: Devin sessions, subagents and tools as an animated circuit board (synthetic data)" width="80%"/></a>
 
-<sub>**devin-office** — live sessions as a circuit board (above) and a local session kanban (RUNNING · BLOCKED · REVIEW · CLOSED) for checking live work · [open the kanban live demo](https://icaro0310.github.io/demos/devin-office-kanban.html)</sub>
+<sub>**devin-office**: local session dashboard. Live view when a Devin session source is available; demo mode uses synthetic data. Circuit board (above) and a session kanban (RUNNING · BLOCKED · REVIEW · CLOSED) · [open the kanban demo](https://icaro0310.github.io/demos/devin-office-kanban.html)</sub>
 
 </div>
 
