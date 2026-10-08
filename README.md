@@ -80,7 +80,7 @@ previews the plan before installing (`--apply` to commit).
 | **Control** | [`devin-redact`](https://github.com/Icaro0310/devin-redact) | Secret/PII redaction that understands Devin tool-call semantics, in-place in SQLite, with a verification gate. |
 | **Understand** | [`devin-history`](https://github.com/Icaro0310/devin-history) | Export and audit Devin session history — markdown notes, JSON, CSV, Obsidian-ready. |
 | **Understand** | [`devin-doctor`](https://github.com/Icaro0310/devin-doctor) | Diagnose a Devin Desktop installation: stores, schema, locks, config, disk — with fix suggestions. |
-| **Related** | [`devin-pm`](https://github.com/Icaro0310/devin-pm) | Project manager over sessions: per-repo rollups, milestones, status reports, registry.json. |
+| **Operations** | [`devin-pm`](https://github.com/Icaro0310/devin-pm) | Project manager over sessions: per-repo rollups, milestones, status reports, registry.json. |
 | **Verify** | [`devin-qa-pack`](https://github.com/Icaro0310/devin-qa-pack) | Flagship QA audit: verifies session deliverable claims against tool-call ground truth and reports PASS/PARTIAL/UNVERIFIED. |
 | **Verify** | [`devin-metrics`](https://github.com/Icaro0310/devin-metrics) | Local-only session observability: activity, context size, and token peaks per project/model/day; zero telemetry. Devin does not persist cost fields, so cost is not claimed. Includes an optional dashboard subpackage and command. |
 | **Control** | [`devin-backup`](https://github.com/Icaro0310/devin-backup) | Safe snapshot/verify/restore/rotate of Devin stores with schema-version manifests. |
