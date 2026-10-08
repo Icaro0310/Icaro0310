@@ -74,6 +74,9 @@ previews the plan before installing (`--apply` to commit).
 
 <br/>
 
+*(Understand / Verify / Control / Build are the public tracks;*
+*Operations, Distribution and Maintainer hub are support roles.)*
+
 | Group | Repo | What it does |
 |---|---|---|
 | **Understand** | [`devin-internals-spec`](https://github.com/Icaro0310/devin-internals-spec) | Documented internals of Devin Desktop/CLI stores + schema-version detection + fixtures + devin-inspect CLI. |
