@@ -32,7 +32,7 @@ The ecosystem by job — the flagship of each track:
 | **Understand** | [`devin-internals-spec`](https://github.com/Icaro0310/devin-internals-spec) | Devin's local stores, documented — schema detection, typed parsers, contract boundary against drift |
 | **Verify** | [`devin-qa-pack`](https://github.com/Icaro0310/devin-qa-pack) | Flagship evidence gate — PASS / PARTIAL / UNVERIFIED from recorded tool calls |
 | **Verify** | [`devin-evals`](https://github.com/Icaro0310/devin-evals) | Replay recorded sessions against deterministic rubrics; agent quality as a regression signal |
-| **Verify** | [`poordjaevin`](https://github.com/Icaro0310/poordjaevin) | Calibrated yes/no/score answers for agentic workflows — measured ECE 0.170 → 0.071 on the shipped eval set |
+| **Verify** | [`devin-judge`](https://github.com/Icaro0310/devin-judge) | Calibrated yes/no/score answers for agentic workflows — measured ECE 0.170 → 0.071 on the shipped eval set |
 | **Control** | [`devin-bridge`](https://github.com/Icaro0310/devin-bridge) | Policy-gated ACP client — allow / deny / ask, fail-closed, per-repo session isolation |
 | **Control** | [`devin-redact`](https://github.com/Icaro0310/devin-redact) | Secret/PII redaction that understands tool-call semantics before exports leave the machine |
 | **Build** | [`devin-devkit`](https://github.com/Icaro0310/devin-devkit) | Profile-based distribution: registry-driven installs for Linux, Personal Windows and Corporate Windows |
@@ -45,7 +45,7 @@ By role — ordered paths through the ecosystem:
 - **End users:** [`awesome-devin`](https://github.com/Icaro0310/awesome-devin) → [`devin-devkit`](https://github.com/Icaro0310/devin-devkit) → [`devin-doctor`](https://github.com/Icaro0310/devin-doctor)
 - **Maintainers:** [`devin-powerups`](https://github.com/Icaro0310/devin-powerups) → [`devin-pm`](https://github.com/Icaro0310/devin-pm) → [`devin-internals-spec`](https://github.com/Icaro0310/devin-internals-spec)
 - **Operations:** [`devin-doctor`](https://github.com/Icaro0310/devin-doctor) → [`devin-backup`](https://github.com/Icaro0310/devin-backup) → [`devin-janitor`](https://github.com/Icaro0310/devin-janitor) → [`devin-metrics`](https://github.com/Icaro0310/devin-metrics)
-- **QA engineers:** [`devin-qa-pack`](https://github.com/Icaro0310/devin-qa-pack) → [`devin-evals`](https://github.com/Icaro0310/devin-evals) → [`poordjaevin`](https://github.com/Icaro0310/poordjaevin)
+- **QA engineers:** [`devin-qa-pack`](https://github.com/Icaro0310/devin-qa-pack) → [`devin-evals`](https://github.com/Icaro0310/devin-evals) → [`devin-judge`](https://github.com/Icaro0310/devin-judge)
 - **Security engineers:** [`devin-backup`](https://github.com/Icaro0310/devin-backup) → [`devin-redact`](https://github.com/Icaro0310/devin-redact) → [`devin-janitor`](https://github.com/Icaro0310/devin-janitor)
 <!-- DEVIN-PATHS:END -->
 
@@ -107,7 +107,7 @@ previews the plan before installing (`--apply` to commit).
 | **Control** | [`devin-bridge`](https://github.com/Icaro0310/devin-bridge) | Policy-gated ACP client (Node.js, CI matrix Node 22 + 24): isolated sessions per repo with allow/deny/ask permission policy. |
 | **Control** | [`devin-orchestrator`](https://github.com/Icaro0310/devin-orchestrator) | Background-worker fan-out policy: deterministic planner enforcing worker caps (max 3), no nesting, read-only profiles for review, collect-before-report. Skill + always-on rule. |
 | **Understand** | [`devin-office`](https://github.com/Icaro0310/devin-office) | Local-first Devin session and subagent dashboard with standalone and optional split modes. |
-| **Verify** | [`poordjaevin`](https://github.com/Icaro0310/poordjaevin) | Djævin: calibrated local-first decision layer with typed questions and honest confidence. The Devin ACP backend reuses the model your Devin CLI already runs (no extra download, no API key); the local NLI backend stays as a fully-offline fallback. |
+| **Verify** | [`devin-judge`](https://github.com/Icaro0310/devin-judge) | Djævin: calibrated local-first decision layer with typed questions and honest confidence. The Devin ACP backend reuses the model your Devin CLI already runs (no extra download, no API key); the local NLI backend stays as a fully-offline fallback. |
 | **Control** | [`devin-switch`](https://github.com/Icaro0310/devin-switch) | Switch between Devin configuration profiles (hooks, MCP, models) with snapshot, sha256 verify, atomic write, journal and rollback. Dry-run by default; secrets never printed. |
 | **Build** | [`devin-skill-catalog`](https://github.com/Icaro0310/devin-skill-catalog) | Lifecycle + quality gates for .devin skills/rules: scan, lint, diff, G1/G2 gates, quarantined→approved→active lifecycle, sha256-verified export/import bundles (imports land quarantined). |
 | **Distribution** | [`devin-devkit`](https://github.com/Icaro0310/devin-devkit) | Profile-based installer for the public Devin tools across Linux, Personal Windows and Corporate Windows; reads the registry manifest and installs isolated CLIs with uv, plus the Node bridge with npm. |
