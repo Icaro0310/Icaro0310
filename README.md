@@ -76,7 +76,7 @@ explicitly, because the OS alone cannot distinguish a personal Windows machine
 from a restricted one. The registry records per-tool compatibility; the DevKit
 previews the plan before installing (`--apply` to commit).
 
-**See the ecosystem in action** → [reproducible agent-assurance demo](https://github.com/Icaro0310/devin-assure/tree/main/examples/agent-assurance): synthetic sessions with known defects → schema check → claim audit → rubric grading, end to end.
+**See the ecosystem in action** → [reproducible agent-assurance demo](https://github.com/Icaro0310/devin-assure/tree/main/packages/qa-pack/examples/agent-assurance): synthetic sessions with known defects → schema check → claim audit → rubric grading, end to end.
 
 <a id="catalog"></a>
 
