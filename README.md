@@ -33,7 +33,7 @@ The ecosystem by job — the flagship of each track:
 | **Verify** | [`devin-assure`](https://github.com/Icaro0310/devin-assure) | Flagship evidence gate — PASS / PARTIAL / UNVERIFIED from recorded tool calls |
 | **Verify** | [`devin-evals`](https://github.com/Icaro0310/devin-assure/tree/main/packages/evals) | Replay recorded sessions against deterministic rubrics; agent quality as a regression signal |
 | **Verify** | [`devin-judge`](https://github.com/Icaro0310/devin-judge) | Calibrated yes/no/score answers for agentic workflows — measured ECE 0.170 → 0.071 on the shipped eval set |
-| **Control** | [`devin-bridge`](https://github.com/Icaro0310/devin-bridge) | Policy-gated ACP client — allow / deny / ask, fail-closed, per-repo session isolation |
+| **Control** | [`devin-control`](https://github.com/Icaro0310/devin-control) | Policy-gated ACP client — allow / deny / ask, fail-closed, per-repo session isolation |
 | **Control** | [`devin-state`](https://github.com/Icaro0310/devin-state) | Secret/PII redaction that understands tool-call semantics before exports leave the machine |
 | **Build** | [`devin-devkit`](https://github.com/Icaro0310/devin-devkit) | Profile-based distribution: registry-driven installs for Linux, Personal Windows and Corporate Windows |
 
@@ -135,7 +135,7 @@ applicable.
 
 Yes — **no VM, no tunnel, no model server, no Slack, no Obsidian.** The
 DevKit-installable catalog still works on a locked-down corporate machine.
-The exceptions are explicit in the registry: `devin-bridge` needs Node.js
+The exceptions are explicit in the registry: `devin-control` (the npm bridge) needs Node.js
 ≥ 20 (it is an ACP client for the Devin CLI itself); `poordjaevin` has a
 fully offline NLI fallback; `qwenpaw-suite` is an optional related suite and
 is unsupported in Corporate Windows.
@@ -176,7 +176,7 @@ runtime can still be reconstructed locally:
   machine is on.
 - **Outbound restrictions are a non-issue** — the read/audit tools run
   fully offline. Only explicit opt-ins touch the network: `devin-devkit`
-  downloads installs over HTTPS and `devin-bridge` speaks ACP to the
+  downloads installs over HTTPS and `devin-control` (the npm bridge) speaks ACP to the
   local Devin CLI.
 
 What a corporate machine genuinely cannot provide:
