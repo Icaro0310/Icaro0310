@@ -20,6 +20,7 @@ catalog.
 [![profile views](https://komarev.com/ghpvc/?username=Icaro0310&style=flat-square&color=0071e3)](https://github.com/Icaro0310)
 [![followers](https://img.shields.io/github/followers/Icaro0310?style=flat-square&color=1d1d1f)](https://github.com/Icaro0310?tab=followers)
 [![stars](https://img.shields.io/github/stars/Icaro0310/awesome-devin?style=flat-square&label=ecosystem%20stars)](https://github.com/Icaro0310/awesome-devin)
+[![OpenSSF Best Practices](https://www.bestpractices.dev/projects/15215/badge)](https://www.bestpractices.dev/projects/15215)
 
 </div>
 
