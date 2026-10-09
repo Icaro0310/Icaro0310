@@ -8,8 +8,8 @@
 <h1><a href="https://www.linkedin.com/in/ícaro-galvão-do-nascimento-663601280/">Ícaro Galvão</a></h1>
 
 I build local-first tools for understanding, verifying, controlling and
-extending AI coding agents — a public `devin-*` ecosystem organized around
-four jobs: **Understand · Verify · Control · Build**. Distributed through a
+extending AI coding agents — a public `devin-*` ecosystem organized as
+**seven products · four jobs · one foundation**. Distributed through a
 profile-based DevKit, with a maintainer hub and related artifacts in the
 catalog.
 
@@ -28,14 +28,24 @@ catalog.
 
 The ecosystem by job — the products pinned on this profile:
 
-| Track | | |
-|---|---|---|
-| **Understand** | [`devin-explore`](https://github.com/Icaro0310/devin-explore) | Understand Devin sessions: diagnose the install, export history, FTS5 search, knowledge graph, per-repo rollups — all local, no telemetry |
-| **Verify** | [`devin-assure`](https://github.com/Icaro0310/devin-assure) | Flagship evidence gate — PASS / PARTIAL / UNVERIFIED from recorded tool calls |
-| **Control** | [`devin-control`](https://github.com/Icaro0310/devin-control) | Policy-gated ACP client — allow / deny / ask, fail-closed, per-repo session isolation |
-| **Control** | [`devin-judge`](https://github.com/Icaro0310/devin-judge) | Calibrated yes/no/score answers for agentic workflows — measured ECE 0.170 → 0.071 on the shipped eval set |
-| **Build** | [`devin-devkit`](https://github.com/Icaro0310/devin-devkit) | Profile-based distribution: registry-driven installs for Linux, Personal Windows and Corporate Windows |
-| **Build** | [`devin-brain`](https://github.com/Icaro0310/devin-brain) | Anti-poisoning memory store — provenance, versioning, quarantine gate, session-learning utilities |
+| Track | | Packages | |
+|---|---|---|---|
+| **Understand** | [`devin-explore`](https://github.com/Icaro0310/devin-explore) | doctor · history · search · graph · pm | What happened in the agent? Diagnose the install, export history, FTS5 search, knowledge graph, per-repo rollups — all local, no telemetry |
+| **Verify** | [`devin-assure`](https://github.com/Icaro0310/devin-assure) | qa-pack · evals · metrics | Did the agent do what it said? Flagship evidence gate — PASS / PARTIAL / UNVERIFIED from recorded tool calls |
+| **Control** | [`devin-control`](https://github.com/Icaro0310/devin-control) | bridge · orchestrator · switch · office | Policy-gated ACP client — allow / deny / ask, fail-closed, per-repo session isolation |
+| **Control** | [`devin-judge`](https://github.com/Icaro0310/devin-judge) | poordjaevin | Calibrated yes/no/score answers for agentic workflows — measured ECE 0.170 → 0.071 on the shipped eval set |
+| **Build** | [`devin-devkit`](https://github.com/Icaro0310/devin-devkit) | devkit · skill-catalog | Profile-based distribution: registry-driven installs for Linux, Personal Windows and Corporate Windows |
+| **Build** | [`devin-brain`](https://github.com/Icaro0310/devin-brain) | memory | Anti-poisoning memory store — provenance, versioning, quarantine gate, session-learning utilities |
+
+Also in the catalog: [`devin-state`](https://github.com/Icaro0310/devin-state)
+(Control — redact · backup · janitor) and
+[`devin-internals-spec`](https://github.com/Icaro0310/devin-internals-spec), the
+**Foundation** — the typed contract for Devin's local stores that the packages
+depend on; infrastructure, not an install target.
+
+**Start here:** audit an agent → [`devin-assure`](https://github.com/Icaro0310/devin-assure) ·
+diagnose an install → [`devin-explore`](https://github.com/Icaro0310/devin-explore) ·
+browse everything → [`awesome-devin`](https://github.com/Icaro0310/awesome-devin)
 
 By role — ordered paths through the ecosystem:
 
@@ -82,7 +92,7 @@ previews the plan before installing (`--apply` to commit).
 
 <details>
 <!-- DEVIN-CATALOG:BEGIN -->
-<summary><b>The ecosystem — 19 first-party tools · 1 distribution layer · 1 registry hub · 2 related artifacts (23 entries)</b></summary>
+<summary><b>The ecosystem — 7 products · 19 first-party tools · 1 distribution layer · 1 registry hub · 2 related artifacts (23 entries)</b></summary>
 
 <br/>
 
@@ -101,7 +111,7 @@ previews the plan before installing (`--apply` to commit).
 | **Control** | [`devin-backup`](https://github.com/Icaro0310/devin-state) | Safe snapshot/verify/restore/rotate of Devin stores with schema-version manifests. |
 | **Understand** | [`devin-search`](https://github.com/Icaro0310/devin-explore) | FTS5 full-text search across all Devin sessions, role-tagged and project-filtered. |
 | **Understand** | [`devin-graph`](https://github.com/Icaro0310/devin-explore) | Knowledge graph: sessions, projects, files touched, tools used — queryable edges. |
-| **Verify** | [`devin-evals`](https://github.com/Icaro0310/devin-assure) | Deterministic eval harness: replay recorded sessions against rubric graders; the `dream` subgroup generates synthetic sessions with known verdicts (D01-D09, absorbs devin-dream). |
+| **Verify** | [`devin-evals`](https://github.com/Icaro0310/devin-assure) | Deterministic eval harness: replay recorded sessions against rubric graders; the `dream` subgroup generates synthetic sessions with known verdicts (D01-D10, absorbs devin-dream). |
 | **Build** | [`devin-brain`](https://github.com/Icaro0310/devin-brain) | Anti-poisoning memory store: provenance, versioning, quarantine gate, and session-learning utilities. |
 | **Control** | [`devin-janitor`](https://github.com/Icaro0310/devin-state) | Session lifecycle janitor: export-then-delete pipeline, tiered classification, pluggable judge, pending-retry for locked stores. |
 | **Control** | [`devin-control`](https://github.com/Icaro0310/devin-control) | Control how Devin runs: a policy-gated ACP bridge (Node.js, isolated sessions per repo with allow/deny/ask rules), a deterministic background-worker fan-out planner (devin-fanout), config profile switching with snapshot and rollback, and a live activity board (office, source-only). |
@@ -140,8 +150,7 @@ The exceptions are explicit in the registry: `devin-control` (the npm bridge) ne
 fully offline NLI fallback; `qwenpaw-suite` is an optional related suite and
 is unsupported in Corporate Windows.
 
-**Linux:** `pipx install "devin-doctor @ git+https://github.com/Icaro0310/devin-explore.git"` —
-requires Python ≥ 3.10.
+**Linux:** `pipx install devin-doctor` — requires Python ≥ 3.10.
 **Windows:** same via `py -m pip install --user pipx`. Each README documents
 the exact data paths and `--data-dir` overrides for both systems.
 
