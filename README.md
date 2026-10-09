@@ -19,7 +19,7 @@ catalog.
 [![local-first](https://img.shields.io/badge/local--first-zero%20telemetry-0071e3?style=flat-square)](#runs-on-devin-alone)
 [![profile views](https://komarev.com/ghpvc/?username=Icaro0310&style=flat-square&color=0071e3)](https://github.com/Icaro0310)
 [![followers](https://img.shields.io/github/followers/Icaro0310?style=flat-square&color=1d1d1f)](https://github.com/Icaro0310?tab=followers)
-[![stars](https://img.shields.io/github/stars/Icaro0310/awesome-devin?style=flat-square&label=ecosystem%20stars)](https://github.com/Icaro0310/awesome-devin/stargazers)
+[![stars](https://img.shields.io/github/stars/Icaro0310/awesome-devin?style=flat-square&label=ecosystem%20stars)](https://github.com/Icaro0310/awesome-devin)
 
 </div>
 
