@@ -101,7 +101,7 @@ previews the plan before installing (`--apply` to commit).
 
 | Group | Repo | What it does |
 |---|---|---|
-| **Understand** | [`devin-internals-spec`](https://github.com/Icaro0310/devin-internals-spec) | Documented internals of Devin Desktop/CLI stores + schema-version detection + fixtures + devin-inspect CLI. |
+| **Foundation** | [`devin-internals-spec`](https://github.com/Icaro0310/devin-internals-spec) | Documented internals of Devin Desktop/CLI stores + schema-version detection + fixtures + devin-inspect CLI. |
 | **Control** | [`devin-state`](https://github.com/Icaro0310/devin-state) | Devin state lifecycle monorepo: secret/PII redaction (devin-redact), store snapshot backup/restore (devin-backup) and session janitor (devin-janitor), sharing the devin-install-scheduler package. |
 | **Understand** | [`devin-history`](https://github.com/Icaro0310/devin-explore) | Export and audit Devin session history — markdown notes, JSON, CSV, Obsidian-ready. |
 | **Understand** | [`devin-explore`](https://github.com/Icaro0310/devin-explore) | Understand Devin sessions: diagnose the local installation (stores, schema, locks, config, disk — with fix suggestions), export and audit session history, run FTS5 full-text search, query a knowledge graph of sessions/projects/files/tools, and roll sessions into per-repo milestones and status reports. All local, no telemetry. |
